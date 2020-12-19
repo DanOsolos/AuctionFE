@@ -13,7 +13,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,11 +30,6 @@ import { RouterModule, Routes } from '@angular/router';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/', pathMatch: 'full' },
-      { path: 'register', component: RegisterComponent },
-      { path: 'login', component: LoginComponent }
-    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
