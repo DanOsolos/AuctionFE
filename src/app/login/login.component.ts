@@ -1,4 +1,6 @@
+import { InterfaceUtil } from './../util/interfaceutil';
 import { Component, OnInit } from '@angular/core';
+import { Login } from '../model/login';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
+login: Login;
+  constructor() {
+  this.login = InterfaceUtil.getEmptyLoginInterface();
+   }
+  
   ngOnInit(): void {
   }
-
+loginAction(): void {
+  console.log(this.login);
+}
 }
